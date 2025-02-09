@@ -15,7 +15,7 @@ Ein Table der zusätzliche Script Pfade aus eurem "Original" Script enthält, bs
 oder falls eure Config in einem Unterordner wie bspw. "shared" ist, dann macht ihr:
 {"shared/config.lua"}
 
-Dies sorgt dafür, dass alle Scripts die ihr im 3.Argument Table angebt, vor eurem Hauptscript geladen werden, um sicherzustellen dass dieses läuft.
+Dies sorgt dafür, dass alle Scripts die ihr im 4.Argument Table angebt, vor eurem Hauptscript geladen werden, um sicherzustellen dass dieses läuft.
 
 Falls ihr Änderungen an eurem Script vornehmen wollt, könnt ihr dies einfach im Script-Ordner tun und anschließend das betroffene Script neu laden – ein Neustart des Antidumpers ist nicht nötig.
 
