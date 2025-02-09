@@ -1,7 +1,7 @@
 local loadedplayers = {}
 
 --Mainpart--
-RegisterNetEvent("unknown_antidump:server:load", function(resource, script, extras)
+RegisterNetEvent("unknown_antidump:server:load", function(resource, securitykey, script, extras)
     if loadedplayers[source] and loadedplayers[source][resource] then --Check if Player has Script already loaded
         DropPlayer(source, "Tried to dump Script") -- Ban/Kick Part
     else
@@ -25,7 +25,7 @@ RegisterNetEvent("unknown_antidump:server:load", function(resource, script, extr
         -----------------------
 
         --Send to Client--
-        TriggerClientEvent(resource.."unknown_antidump:client:load", source, code)
+        TriggerClientEvent(resource.."unknown_antidump:client:load", source, code, securitykey)
         -------------------
     end
 end)
