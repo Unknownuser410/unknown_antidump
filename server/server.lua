@@ -63,9 +63,10 @@ Citizen.CreateThread(function()
         if error == 200 then
             local data = json.decode(result)  -- JSON antwort decodieren
             local latestVersion = data.tag_name  -- Die neueste Version vom GitHub Release
+            latestVersion = latestVersion:match("^v?(.*)") -- Entferne das 'v' von der GitHub-Version, falls vorhanden
 
             if latestVersion ~= currentVersion then
-                print("Es gibt eine neue Version! Aktuelle Version: " .. currentVersion .. ", Neueste Version: " .. latestVersion)
+                print("Es gibt eine neue Version! ^1Aktuelle Version: " ..currentVersion.. "^0 | ^2Neueste Version: " ..latestVersion.."^0")
             end
         else
             print("Fehler beim Abrufen der GitHub-Daten: " .. error)
