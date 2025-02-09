@@ -1,20 +1,15 @@
 Wie ist der Trigger aufgebaut?
 
-Hauptcode zum Laden:
-local resource = GetCurrentResourceName()
-
-RegisterNetEvent(resource.."unknown_antidump:client:load", function(code)
-    assert(load(code, "Error:"))
-end)
-
 Trigger:
-TriggerServerEvent("unknown_antidump:server:load", GetCurrentResourceName(), "beispiel", "beispiel-table")
+TriggerServerEvent("unknown_antidump:server:load", resource, securitykey, "test", {})
 
 1.Argument = Resourcename, dieser muss nicht geändert werden, dass Native erfasst diesen Automatisch
 
-2.Argument = Der Name eurer Lua-Datei aus dem "scripts" Ordner im Antidumper
+2.Argument = Sicherheitskey, erhöht die Sicherheit und hindert Cheater daran Code auszuführen
 
-3.Argument = 
+3.Argument = Der Name eurer Lua-Datei aus dem "scripts" Ordner im Antidumper
+
+4.Argument = 
 Ein Table der zusätzliche Script Pfade aus eurem "Original" Script enthält, bspw. ihr benötigt noch eure config.lua für das Script, dann macht ihr als Argument folgendes:
 {"config.lua"}
 oder falls eure Config in einem Unterordner wie bspw. "shared" ist, dann macht ihr:
