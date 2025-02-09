@@ -4,7 +4,12 @@ Hauptcode zum Laden:
 local resource = GetCurrentResourceName()
 
 RegisterNetEvent(resource.."unknown_antidump:client:load", function(code)
-    local cd,err = assert(load(code,"Scripterror erkannt: "))() 
+    local func, err = load(code)
+    if func then
+        func() -- Führt den geladenen Code aus
+    else
+        print("Fehler beim Laden des Codes:", err)
+    end
 end)
 
 Trigger:
