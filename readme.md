@@ -21,8 +21,7 @@
 - {"config.lua"} → Lädt config.lua aus dem Hauptverzeichnis.
 - {"shared/config.lua"} → Lädt config.lua aus dem Unterordner shared.
 
-# 🔄 Änderungen an eurem Skript
-## Falls ihr Änderungen an euren Skripten vornehmen wollt:
+# 🔄 Änderungen an eurem Skript (Falls ihr Änderungen an euren Skripten vornehmen wollt)
 - ✅ Einfach die Datei im scripts-Ordner anpassen.
 - ✅ Danach das betroffene Skript neu laden.
 - ❌ Kein Neustart des Antidumpers erforderlich!
