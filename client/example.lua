@@ -1,12 +1,7 @@
 local resource = GetCurrentResourceName()
 
 RegisterNetEvent(resource.."unknown_antidump:client:load", function(code)
-    local func, err = load(code)
-    if func then
-        func() -- Führt den geladenen Code aus
-    else
-        print("Fehler beim Laden des Codes:", err)
-    end
+    assert(load(code, "Error:"))
 end)
 
 Wait(100)
