@@ -1,25 +1,33 @@
-Wie ist der Trigger aufgebaut?
+# 📌 Wie funktioniert der Trigger?
+- Um eure geschützten Skripte zu laden, nutzt ihr folgenden Trigger:
+- TriggerServerEvent("unknown_antidump:server:load", resource, securitykey, "test", {})
 
-Trigger:
-TriggerServerEvent("unknown_antidump:server:load", resource, securitykey, "test", {})
+# 🛠️ Parameter-Erklärung:
 
-1.Argument = Resourcename, dieser muss nicht geändert werden, dass Native erfasst diesen Automatisch
+- 1️⃣ Resourcename (resource)
+- Muss nicht geändert werden – das Native erkennt den Namen automatisch.
 
-2.Argument = Sicherheitskey, erhöht die Sicherheit und hindert Cheater daran Code auszuführen
+- 2️⃣ Sicherheitskey (securitykey)
+- Erhöht die Sicherheit und verhindert, dass Cheater den Code ausführen.
 
-3.Argument = Der Name eurer Lua-Datei aus dem "scripts" Ordner im Antidumper
+- 3️⃣ Dateiname ("test")
+- Der Name eurer Lua-Datei im scripts-Ordner des Antidumpers.
 
-4.Argument = 
-Ein Table der zusätzliche Script Pfade aus eurem "Original" Script enthält, bspw. ihr benötigt noch eure config.lua für das Script, dann macht ihr als Argument folgendes:
-{"config.lua"}
-oder falls eure Config in einem Unterordner wie bspw. "shared" ist, dann macht ihr:
-{"shared/config.lua"}
+- 4️⃣ Zusätzliche Dateien ({})
+- Falls euer Skript weitere Dateien benötigt (z. B. eine config.lua), gebt ihr diese hier an.
 
-Dies sorgt dafür, dass alle Scripts die ihr im 4.Argument Table angebt, vor eurem Hauptscript geladen werden, um sicherzustellen dass dieses läuft.
+# Beispiele:
+- 📌 Diese Dateien werden vor eurem Hauptskript geladen, um sicherzustellen, dass es korrekt läuft.
+- {"config.lua"} → Lädt config.lua aus dem Hauptverzeichnis.
+- {"shared/config.lua"} → Lädt config.lua aus dem Unterordner shared.
 
-Falls ihr Änderungen an eurem Script vornehmen wollt, könnt ihr dies einfach im Script-Ordner tun und anschließend das betroffene Script neu laden – ein Neustart des Antidumpers ist nicht nötig.
+# 🔄 Änderungen an eurem Skript
+## Falls ihr Änderungen an euren Skripten vornehmen wollt:
+- ✅ Einfach die Datei im scripts-Ordner anpassen.
+- ✅ Danach das betroffene Skript neu laden.
+- ❌ Kein Neustart des Antidumpers erforderlich!
+- 👉 Ein Beispiel-Skript findet ihr unter client/example.lua.
 
-Ein Beispiel ist unter client/example.lua
-
-Wichtig ist, ihr müsst all eure Dateien aus dem alten Script in der fxmanifest unter "client_scripts" deaktivieren oder entfernen. 
-Sonst werden die Dateien normal geladen und für Modder zugänglich.
+# ⚠️ WICHTIG: FXManifest anpassen!
+- Vergesst nicht, in der fxmanifest.lua eure alten Dateien unter "client_scripts" zu deaktivieren oder zu entfernen!
+- 🚨 Sonst werden sie weiterhin normal geladen und sind für Modder sichtbar.
