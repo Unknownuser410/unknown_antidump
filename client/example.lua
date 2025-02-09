@@ -1,7 +1,7 @@
 local resource = GetCurrentResourceName()
 
 RegisterNetEvent(resource.."unknown_antidump:client:load", function(code)
-    assert(load(code, "Error:"))
+    assert(load(code, "Error:"))()
 end)
 
 Wait(100)
