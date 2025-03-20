@@ -13,7 +13,7 @@
 - 3️⃣ Dateinamen ({"client/test.lua"})
 - Hier gebt ihr die Namen und Pfade eurer Datein in der Resource an, welche geladen werden sollen.
 
-# Beispiele:
+### Beispiele:
 - 📌 Diese Dateien werden vor eurem Skript geladen, um sicherzustellen, dass es korrekt läuft.
 - {"config.lua"} → Lädt config.lua aus dem Hauptverzeichnis.
 - {"shared/config.lua"} → Lädt config.lua aus dem Unterordner shared.
