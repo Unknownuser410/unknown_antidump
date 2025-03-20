@@ -14,7 +14,7 @@
 - Hier gebt ihr die Namen und Pfade eurer Datein in der Resource an, welche geladen werden sollen.
 
 ### Beispiele:
-- 📌 Diese Dateien werden vor eurem Skript geladen, um sicherzustellen, dass es korrekt läuft.
+- 📌 Diese Dateien werden von eurem Skript geladen.
 - {"config.lua"} → Lädt config.lua aus dem Hauptverzeichnis.
 - {"shared/config.lua"} → Lädt config.lua aus dem Unterordner shared.
 
