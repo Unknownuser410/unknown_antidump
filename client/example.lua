@@ -13,4 +13,4 @@ end)
 
 Wait(100)
 
-TriggerServerEvent("unknown_antidump:server:load", resource, securitykey, "test", {})
+TriggerServerEvent("unknown_antidump:server:load", resource, securitykey, {"client/test.lua"})
