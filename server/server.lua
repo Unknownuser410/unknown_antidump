@@ -12,7 +12,7 @@ local function loadcode(resource,path)
     return success
 end
 
-RegisterNetEvent("unknown_antidump:server:load", function(resource, securitykey, script, extras)
+RegisterNetEvent("unknown_antidump:server:load", function(resource, securitykey, scripts)
     if loadedplayers[source] and loadedplayers[source][resource] then --Check if Player has Script already loaded
         DropPlayer(source, "Tried to dump Script") -- Ban/Kick Part
     else
@@ -23,17 +23,12 @@ RegisterNetEvent("unknown_antidump:server:load", function(resource, securitykey,
         loadedplayers[source][resource] = true
         ---------------------------------
 
+        --Load Code--
         local code = ""
-
-        --Load Dependencies--
-        for i = 1, #extras do
-            code = code.." "..loadcode(resource, extras[i])
+        for i = 1, #scripts do
+            code = code.." "..loadcode(resource, scripts[i])
         end
         ----------------
-
-        --Load actual Code--
-        code = code.." "..loadcode(GetCurrentResourceName(), "scripts/"..script..".lua")
-        -----------------------
 
         --Send to Client--
         TriggerClientEvent(resource.."unknown_antidump:client:load", source, code, securitykey)
