@@ -10,7 +10,7 @@
 - 2️⃣ Sicherheitskey (securitykey)
 - Erhöht die Sicherheit und verhindert, dass Cheater den Code ausführen.
 
-- 3️⃣ Dateiname ({"test"})
+- 3️⃣ Dateiname ({"client/test.lua"})
 - Hier gebt ihr die Namen eurer Datein in der Resource an, welche geladen werden sollen.
 
 # Beispiele:
