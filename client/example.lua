@@ -15,7 +15,7 @@ RegisterNetEvent(resource.."unknown_antidump:client:load", function(files,key)
             -- Fehler Handling
             local cleanError = string.match(err, ":%d+:%s*(.*)") or err
             local lineNumber = string.match(err, ":(%d+):") or "?"
-            print("^1Error^0 [Zeile - " ..lineNumber.. "] " ..cleanError)
+            print("^1Error^0 [Script: " ..v.file.. " | Zeile - " ..lineNumber.. "] " ..cleanError)
         else
             --Execute Code--
             pcall(success)
