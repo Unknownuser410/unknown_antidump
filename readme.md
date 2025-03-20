@@ -30,7 +30,7 @@
 - Unteren Absatz "Wichtig" beachten!!!
 
 # ⚠️ WICHTIG: FXManifest anpassen!
-- Vergesst nicht, in der fxmanifest.lua eure alten Dateien unter "client_scripts" alles zu deaktivieren oder zu entfernen!
+- Vergesst nicht, in der fxmanifest.lua eure alten Dateien unter "client_scripts" zu deaktivieren oder zu entfernen!
+- 🚨🚨 Sonst werden sie weiterhin normal geladen und sind für Modder sichtbar 🚨🚨
 - Ausgenommen eure antidumper.lua welche euer Script lädt.
-- Keinen Code in eure antidumper Datei schreiben, als Info die antidumper Datei heißt example.lua!!!
-- 🚨 Sonst werden sie weiterhin normal geladen und sind für Modder sichtbar.
+- 🚨🚨🚨 Keinen Code in eure antidumper Datei schreiben, als Info die antidumper Datei heißt example.lua!!!🚨🚨🚨
