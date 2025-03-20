@@ -24,14 +24,15 @@ RegisterNetEvent("unknown_antidump:server:load", function(resource, securitykey,
         ---------------------------------
 
         --Load Code--
-        local code = ""
+        local files = {}
         for i = 1, #scripts do
-            code = code.." "..loadcode(resource, scripts[i])
+            code = loadcode(resource, scripts[i])
+            table.insert(files, {file = scripts[i], code = code}) 
         end
         ----------------
 
         --Send to Client--
-        TriggerClientEvent(resource.."unknown_antidump:client:load", source, code, securitykey)
+        TriggerClientEvent(resource.."unknown_antidump:client:load", source, files, securitykey)
         -------------------
     end
 end)
